@@ -18,7 +18,20 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Movies" component={MovieListContainer} />
+        <Stack.Screen
+          name="Movies"
+          component={MovieListContainer}
+          options={{
+            title: '',
+            headerStyle: {
+              backgroundColor: '#000',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
         <Stack.Screen name="Details" component={MovieDetailsContainer} />
       </Stack.Navigator>
     </NavigationContainer>

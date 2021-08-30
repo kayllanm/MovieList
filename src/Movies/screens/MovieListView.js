@@ -35,15 +35,21 @@ const MovieListView = ({fetchMovies, movies, navigation}: Props) => {
             {movies.movies?.results?.map((movie, index) => {
               return (
                 <TouchableOpacity onPress={() => goToDetails(movie)}>
-                  <Center>
-                    <Box
-                      bg="black"
-                      size={48}
-                      rounded="lg"
-                      _text={{
-                        fontSize: 'sm',
-                        fontWeight: 'bold',
-                        color: 'white',
+                  <Box
+                    bg="black"
+                    size={48}
+                    rounded="sm"
+                    _text={{
+                      fontSize: 'sm',
+                      fontWeight: 'bold',
+                      color: 'white',
+                    }}>
+                    <View
+                      style={{
+                        justifyContent: 'center',
+                        alignItems:'center',
+                        width: '100%',
+                        height: '100%',
                       }}>
                       <Image
                         size={'lg'}
@@ -55,8 +61,8 @@ const MovieListView = ({fetchMovies, movies, navigation}: Props) => {
                       <Text fontSize="md" style={{color: '#fff'}}>
                         {movie.title}
                       </Text>
-                    </Box>
-                  </Center>
+                    </View>
+                  </Box>
                 </TouchableOpacity>
               );
             })}
